@@ -13,6 +13,7 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private ContactHelper contactHelper;
+    private SessionHelper sessionHelper;
 
     public void init() {
         wd = new FirefoxDriver();
@@ -21,17 +22,8 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(wd);
         contactHelper = new ContactHelper(wd);
         navigationHelper = new NavigationHelper(wd);
-        login("admin", "secret");
-    }
-
-    public void login(String username, String password) {
-      wd.findElement(By.name("user")).clear();
-      wd.findElement(By.name("user")).sendKeys(username);
-      wd.findElement(By.id("LoginForm")).click();
-      wd.findElement(By.name("pass")).click();
-      wd.findElement(By.name("pass")).clear();
-      wd.findElement(By.name("pass")).sendKeys(password);
-      wd.findElement(By.xpath("//input[@value='Login']")).click();
+        sessionHelper = new SessionHelper(wd);
+        sessionHelper.login("admin", "secret");
     }
 
     public void stop() {
