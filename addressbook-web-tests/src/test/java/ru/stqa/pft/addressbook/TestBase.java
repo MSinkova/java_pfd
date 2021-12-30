@@ -156,4 +156,8 @@ public class TestBase {
     protected void selectContact() {
         wd.findElement(By.id("MassCB")).click();
     }
+
+    protected void deleteSelectedGroups() {
+      wd.findElement(By.xpath("//div[@id='content']/form/input[5]")).click();
+    }
 }
