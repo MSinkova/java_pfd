@@ -11,10 +11,6 @@ public class GroupHelper extends HelperBase {
     }
 
     public void returnToGroupPage() {
-     click(By.linkText("Logout"));
-    }
-
-    public void submitGroupCreation() {
       click(By.linkText("group page"));
     }
 
@@ -22,7 +18,10 @@ public class GroupHelper extends HelperBase {
       type(By.name("group_name"), groupData.name());
       type(By.name("group_header"), groupData.header());
       type(By.name("group_footer"), groupData.footer());
-      click(By.name("submit"));
+    }
+
+    public void submitGroupCreation() {
+        click(By.name("submit"));
     }
 
     public void initGroupCreation() {
@@ -35,5 +34,13 @@ public class GroupHelper extends HelperBase {
 
     public void deleteSelectedGroups() {
        click(By.xpath("//div[@id='content']/form/input[5]"));
+    }
+
+    public void initGroupModification() {
+        click(By.name("edit"));
+    }
+
+    public void submitGroupModification() {
+        click(By.xpath("//input[@name='update']"));
     }
 }
