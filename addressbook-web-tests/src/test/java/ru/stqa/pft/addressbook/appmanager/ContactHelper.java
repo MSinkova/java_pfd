@@ -1,12 +1,13 @@
 package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
-
 
     public ContactHelper(WebDriver wd) {
       super(wd);
@@ -16,20 +17,26 @@ public class ContactHelper extends HelperBase {
       click(By.xpath("//div[@id='content']/form/input[21]"));
     }
 
-    public void fillContactForm(ContactData contactData) {
-      type(By.name("firstname"),contactData.firstname());
-      type(By.name("middlename"),contactData.middlename());
-      type(By.name("lastname"),contactData.lastname());
-      type(By.name("home"),contactData.home());
-      type(By.name("mobile"),contactData.mobile());
-      type(By.name("mobile"),contactData.mobile());
-      type(By.name("email"),contactData.email());
-      type(By.name("email2"),contactData.email2());
+    public void fillContactForm(ContactData contactData, boolean creation) {
+      type(By.name("firstname"),contactData.getFirstname());
+      type(By.name("middlename"),contactData.getMiddlename());
+      type(By.name("lastname"),contactData.getLastname());
+      type(By.name("home"),contactData.getHome());
+      type(By.name("mobile"),contactData.getMobile());
+      type(By.name("mobile"),contactData.getMobile());
+      type(By.name("email"),contactData.getEmail());
+      type(By.name("email2"),contactData.getEmail2());
       click(By.name("bday"));
       click(By.name("bmonth"));
-      type(By.name("byear"),contactData.byear());
-      type(By.name("address2"),contactData.address2());
-      type(By.name("phone2"),contactData.phone2());
+      type(By.name("byear"),contactData.getByear());
+      type(By.name("address2"),contactData.getAddress2());
+      type(By.name("phone2"),contactData.getPhone2());
+
+      if (creation) {
+          new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+      } else {
+          Assert.assertFalse(isElementPresent(By.name("new_group")));
+      }
     }
 
     public void initContactCreation() {
