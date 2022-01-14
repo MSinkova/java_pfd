@@ -64,7 +64,7 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//div[@id='content']/form/input[22]"));
     }
 
-    public void createContact(ContactData contact, boolean creation) {
+    public void createContact(ContactData contact) {
         initContactCreation();
         fillContactForm(new ContactData("Mariia", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "Moscow", "test3"), true);
         submitContactCreation();
