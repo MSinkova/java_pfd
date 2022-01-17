@@ -33,8 +33,8 @@ public class ContactHelper extends HelperBase {
       type(By.name("phone2"),contactData.getPhone2());
 
       if (creation) {
-          new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
-      } else {
+          new Select(wd.findElement(By.name("new_group"))).selectByIndex(1);
+          } else {
           Assert.assertFalse(isElementPresent(By.name("new_group")));
       }
     }
