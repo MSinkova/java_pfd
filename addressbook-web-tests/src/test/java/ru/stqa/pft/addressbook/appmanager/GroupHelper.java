@@ -2,8 +2,13 @@ package ru.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbook.model.GroupData;
+
+import java.util.AbstractList;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GroupHelper extends HelperBase {
 
@@ -16,9 +21,9 @@ public class GroupHelper extends HelperBase {
     }
 
     public void fillGroupForm(GroupData groupData) {
-      type(By.name("group_name"), groupData.name());
-      type(By.name("group_header"), groupData.header());
-      type(By.name("group_footer"), groupData.footer());
+      type(By.name("group_name"), groupData.getName());
+      type(By.name("group_header"), groupData.getHeader());
+      type(By.name("group_footer"), groupData.getFooter());
     }
 
     public void submitGroupCreation() {
@@ -58,5 +63,18 @@ public class GroupHelper extends HelperBase {
 
     public int getGroupCount() {
         return wd.findElements(By.name("selected[]")).size();
+    }
+
+    public List<GroupData> getGroupList() {
+        List<GroupData> groups = new ArrayList<GroupData>();
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group")); // найти все элементы которые имею тег span и класс group
+        for (WebElement element: elements) { //этот веб элемент пробигает по списку элементов
+            String name = element.getText(); // и из каждого такого элемента мы получаем текст
+            String id = element.findElement(By.tagName("input")).getAttribute("value");
+            GroupData group = new GroupData(id,null, null, name);
+            groups.add(group); // добавляем объект в список
+
+        }
+        return groups;
     }
 }
