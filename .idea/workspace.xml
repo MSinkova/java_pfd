@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="509ed37e-9202-46cf-b946-c339c1983b98" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/GroupData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <recent name="ru.stqa.pfd.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.GroupCreationTests">
+  <component name="RunManager" selected="Gradle.GroupModificationTests">
     <configuration name="ContactAddTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -207,8 +209,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupModificationTests" />
+        <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupsDeletionTests" />
         <item itemvalue="Gradle.ContactAddTest" />
         <item itemvalue="Gradle.ContactModificationTests" />
@@ -250,19 +252,34 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java</url>
-          <line>29</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/Assert.java</url>
           <line>1322</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java</url>
-          <line>27</line>
-          <option name="timeStamp" value="21" />
+          <line>33</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupModificationTests.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/Assert.java</url>
+          <line>1064</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/Assert.java</url>
+          <line>1088</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
