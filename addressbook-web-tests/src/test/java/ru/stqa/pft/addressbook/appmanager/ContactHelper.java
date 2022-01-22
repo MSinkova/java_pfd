@@ -36,7 +36,7 @@ public class ContactHelper extends HelperBase {
           new Select(wd.findElement(By.name("new_group"))).selectByIndex(1);
           } else {
           Assert.assertFalse(isElementPresent(By.name("new_group")));
-      }
+     }
     }
 
     public void initContactCreation() {
@@ -75,8 +75,4 @@ public class ContactHelper extends HelperBase {
         return isElementPresent(By.name("selected[]"));
     }
 
-    public boolean webElementOptionGroup() {
-        click(By.linkText("groups"));
-        return isElementPresent(By.name("selected[]"));
-    }
 }
