@@ -4,13 +4,13 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactTestBase extends TestBase {
 
-    public void createContact() {
+    public void createContact(ContactData contact) {
         app.getGroupHelper().createGroupIfNotExist();
-        app.getContactHelper().createContact(new ContactData("Mariia", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "Moscow",null));
+        app.getContactHelper().createContact(contact);
     }
 
-    public void createContactIfNotExist() {
+    public void createContactIfNotExist(ContactData contact) {
         if (! app.getContactHelper().isThereAСontact())
-            createContact();
+            createContact(contact);
     }
 }
