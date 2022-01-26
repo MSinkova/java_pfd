@@ -14,6 +14,7 @@ public class ContactData {
     private String phone2;
 
     public ContactData(String firstname, String middlename, String lastname, String home, String mobile, String email, String email2, String byear, String address2, String phone2) {
+        this.id = Integer.MAX_VALUE;
         this.firstname = firstname;
         this.middlename = middlename;
         this.lastname = lastname;
@@ -27,7 +28,7 @@ public class ContactData {
     }
 
     public ContactData(int id, String firstname, String middlename, String lastname, String home, String mobile, String email, String email2, String byear, String address2, String phone2) {
-        this.id = Integer.MAX_VALUE;
+        this.id = id;
         this.firstname = firstname;
         this.middlename = middlename;
         this.lastname = lastname;
@@ -80,12 +81,13 @@ public class ContactData {
         return phone2;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    @Override
+    public String toString() {
+        return "ContactData{" +
+                "id=" + id +
+                ", firstname='" + firstname + '\'' +
+                ", lastname='" + lastname + '\'' +
+                '}';
     }
 
     @Override
@@ -108,13 +110,14 @@ public class ContactData {
         return result;
     }
 
-    @Override
-    public String toString() {
-        return "ContactData{" +
-                "firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
-                '}';
+    public int getId() {
+        return id;
     }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
 }
 
 
