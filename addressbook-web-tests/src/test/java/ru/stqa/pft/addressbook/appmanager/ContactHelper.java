@@ -8,7 +8,6 @@ import ru.stqa.pft.addressbook.model.ContactData;
 
 public class ContactHelper extends HelperBase {
 
-
     public ContactHelper(WebDriver wd) {
       super(wd);
     }
@@ -52,8 +51,8 @@ public class ContactHelper extends HelperBase {
       wd.switchTo().alert().accept();
     }
 
-    public void selectContact() {
-      click(By.id("MassCB"));
+    public void selectContact(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
     }
 
     public void initContactModification() {
