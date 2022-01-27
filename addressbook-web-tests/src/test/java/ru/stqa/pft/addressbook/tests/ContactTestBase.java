@@ -5,12 +5,12 @@ import ru.stqa.pft.addressbook.model.ContactData;
 public class ContactTestBase extends TestBase {
 
     public void createContact(ContactData contact) {
-        app.getGroupHelper().createGroupIfNotExist();
-        app.getContactHelper().createContact(contact);
+        app.group().createGroupIfNotExist();
+        app.contact().createContact(contact);
     }
 
-    public void createContactIfNotExist(ContactData contact) {
-        if (! app.getContactHelper().isThereAСontact())
+    public void createIfNotExist(ContactData contact) {
+        if (! app.contact().isThereAСontact())
             createContact(contact);
     }
 }

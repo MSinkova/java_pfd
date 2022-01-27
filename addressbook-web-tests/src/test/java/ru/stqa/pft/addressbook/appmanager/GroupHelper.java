@@ -48,10 +48,24 @@ public class GroupHelper extends HelperBase {
         click(By.xpath("//input[@name='update']"));
     }
 
-    public void createGroup(GroupData group) {
+    public void create(GroupData group) {
         initGroupCreation();
         fillGroupForm(group);
         submitGroupCreation();
+        returnToGroupPage();
+    }
+
+    public void modify(int index, GroupData group) {
+        selectGroup(index);
+        initGroupModification();
+        fillGroupForm(group);
+        submitGroupModification();
+        returnToGroupPage();
+    }
+
+    public void delete(int index) {
+        selectGroup(index);
+        deleteSelectedGroups();
         returnToGroupPage();
     }
 
@@ -64,14 +78,13 @@ public class GroupHelper extends HelperBase {
         return wd.findElements(By.name("selected[]")).size();
     }
 
-    public List<GroupData> getGroupList() {
+    public List<GroupData> list() {
         List<GroupData> groups = new ArrayList<GroupData>();
-        List<WebElement> elements = wd.findElements(By.cssSelector("span.group")); // найти все элементы которые имею тег span и класс group
-        for (WebElement element: elements) { //этот веб элемент пробигает по списку элементов
-            String name = element.getText(); // и из каждого такого элемента мы получаем текст
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+        for (WebElement element: elements) {
+            String name = element.getText();
             int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-            GroupData group = new GroupData(id,null, null, name);
-            groups.add(group); // добавляем объект в список
+            groups.add(new GroupData().withId(id).withName(name));
 
         }
         return groups;
@@ -79,7 +92,7 @@ public class GroupHelper extends HelperBase {
 
     public void createGroupIfNotExist() {
         if(!isThereAGroup()) {
-            createGroup(new GroupData("test1","test","nameGroup"));
+            create(new GroupData().withName("nameGroup").withFooter("test2").withHeader("test1"));
         }
     }
 }
