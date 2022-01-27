@@ -26,7 +26,7 @@ public class ContactModificationTests extends ContactTestBase{
         List<ContactData> after = app.contact().list();
         Assert.assertEquals(after.size(), before.size());
 
-        before.remove(before.size() - 1);
+        before.remove(index);
         before.add(contact);
         Comparator<? super ContactData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
         before.sort(byId);
