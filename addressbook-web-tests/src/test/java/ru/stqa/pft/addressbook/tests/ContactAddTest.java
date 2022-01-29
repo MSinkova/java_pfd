@@ -9,19 +9,20 @@ import java.util.List;
 
 public class ContactAddTest extends ContactTestBase {
 
-  @Test (enabled = false)
+  @Test
   public void testContactAdd() {
     app.contact().contactPage();
     List<ContactData> before = app.contact().list();
-    ContactData contact = new ContactData("Sidorova", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "79876664343");
-    createContact(contact);
+    ContactData contact = new ContactData().withLastname("Petrov").withFirstname("Ivan").withAddress2("Moscow").withEmail("232@mail.ru").withMobile("78961234545");
+    create(contact);
     List<ContactData> after = app.contact().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
     before.add(contact);
     Comparator<? super ContactData> byId =  (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
-    contact.setId(after.stream().max((o1, o2) -> Integer.compareUnsigned(o1.getId(), o2.getId())).get().getId());
-
+    contact.withId(after.stream().max((o1, o2) -> Integer.compareUnsigned(o1.getId(), o2.getId())).get().getId());
+    before.sort(byId);
+    after.sort(byId);
     Assert.assertEquals(before, after);
   }
 }

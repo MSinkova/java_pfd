@@ -1,7 +1,7 @@
 package ru.stqa.pft.addressbook.model;
 
 public class ContactData {
-    private int id;
+    private int id = Integer.MAX_VALUE;
     private String firstname;
     private String middlename;
     private String lastname;
@@ -12,34 +12,6 @@ public class ContactData {
     private String byear;
     private String address2;
     private String phone2;
-
-    public ContactData(String firstname, String middlename, String lastname, String home, String mobile, String email, String email2, String byear, String address2, String phone2) {
-        this.id = Integer.MAX_VALUE;
-        this.firstname = firstname;
-        this.middlename = middlename;
-        this.lastname = lastname;
-        this.home = home;
-        this.mobile = mobile;
-        this.email = email;
-        this.email2 = email2;
-        this.byear = byear;
-        this.address2 = address2;
-        this.phone2 = phone2;
-    }
-
-    public ContactData(int id, String firstname, String middlename, String lastname, String home, String mobile, String email, String email2, String byear, String address2, String phone2) {
-        this.id = id;
-        this.firstname = firstname;
-        this.middlename = middlename;
-        this.lastname = lastname;
-        this.home = home;
-        this.mobile = mobile;
-        this.email = email;
-        this.email2 = email2;
-        this.byear = byear;
-        this.address2 = address2;
-        this.phone2 = phone2;
-    }
 
     public String getFirstname() {
         return firstname;
@@ -81,6 +53,65 @@ public class ContactData {
         return phone2;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public ContactData withId(int id) {
+        this.id = id;
+        return this;
+    }
+
+    public ContactData withFirstname(String firstname) {
+        this.firstname = firstname;
+        return this;
+    }
+
+    public ContactData withMiddlename(String middlename) {
+        this.middlename = middlename;
+        return this;
+    }
+
+    public ContactData withLastname(String lastname) {
+        this.lastname = lastname;
+        return this;
+    }
+
+    public ContactData withHome(String home) {
+        this.home = home;
+        return this;
+    }
+
+    public ContactData withMobile(String mobile) {
+        this.mobile = mobile;
+        return this;
+    }
+
+    public ContactData withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+
+    public ContactData withEmail2(String email2) {
+        this.email2 = email2;
+        return this;
+    }
+
+    public ContactData withByear(String byear) {
+        this.byear = byear;
+        return this;
+    }
+
+    public ContactData withAddress2(String address2) {
+        this.address2 = address2;
+        return this;
+    }
+
+    public ContactData withPhone2(String phone2) {
+        this.phone2 = phone2;
+        return this;
+    }
+
     @Override
     public String toString() {
         return "ContactData{" +
@@ -109,15 +140,6 @@ public class ContactData {
         result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
         return result;
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 }
 
 

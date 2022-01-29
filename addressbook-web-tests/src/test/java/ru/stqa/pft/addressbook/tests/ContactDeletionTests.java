@@ -12,10 +12,10 @@ public class ContactDeletionTests extends ContactTestBase {
   @BeforeMethod
   public void ensurePreconditions() {
     app.contact().contactPage();
-    createIfNotExist(new ContactData("Mariia", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "Moscow"));
+    createIfNotExist(new ContactData().withLastname("Petrov").withFirstname("Ivan").withAddress2("Moscow").withEmail("232@mail.ru").withMobile("78961234545"));
   }
 
-  @Test(enabled = false)
+  @Test
   public void testContactDeletion() {
     List<ContactData> before = app.contact().list();
     int index = before.size() - 1;
