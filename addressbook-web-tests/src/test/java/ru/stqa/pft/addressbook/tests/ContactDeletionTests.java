@@ -15,7 +15,7 @@ public class ContactDeletionTests extends ContactTestBase {
     createIfNotExist(new ContactData("Mariia", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "Moscow"));
   }
 
-  @Test(enabled = false)
+  @Test
   public void testContactDeletion() {
     List<ContactData> before = app.contact().list();
     int index = before.size() - 1;

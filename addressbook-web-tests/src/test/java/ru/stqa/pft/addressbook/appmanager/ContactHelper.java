@@ -55,12 +55,13 @@ public class ContactHelper extends HelperBase {
       wd.switchTo().alert().accept();
     }
 
-    public void selectContact(int id) {
-        wd.findElements(By.name("selected[]")).get(id).click();
+    public void selectContact(int index) {
+        wd.findElements(By.name("selected[]")).get(index).click();
     }
 
-    public void initContactModification() {
-        click(By.xpath("//img[@alt='Edit']"));
+    public void initContactModification(int index) {
+        wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
+        //click(By.name("edit"));
     }
 
     public void submitContactModification() {
@@ -76,7 +77,7 @@ public class ContactHelper extends HelperBase {
 
     public void modify(int index, ContactData contact) {
         selectContact(index);
-        initContactModification();
+        initContactModification(index);
         fillContactForm(contact, false);
         submitContactModification();
         contactPage();
