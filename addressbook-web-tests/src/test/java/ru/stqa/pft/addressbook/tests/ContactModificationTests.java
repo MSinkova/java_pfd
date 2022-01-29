@@ -17,7 +17,7 @@ public class ContactModificationTests extends ContactTestBase{
         createIfNotExist(new ContactData("Mariia", "S", "Sinkova", "Moscow", "89143245555", "123@mail.ru", "234@mail.ru", "1990", "Moscow", "Moscow"));
     }
 
-    @Test
+    @Test(enabled = false)
     public void testContactModification() {
         List<ContactData> before = app.contact().list();
         int index = before.size() - 1;
