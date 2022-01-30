@@ -3,54 +3,34 @@ package ru.stqa.pft.addressbook.model;
 public class ContactData {
     private int id = Integer.MAX_VALUE;
     private String firstname;
-    private String middlename;
     private String lastname;
-    private String home;
-    private String mobile;
-    private String email;
-    private String email2;
-    private String byear;
-    private String address2;
-    private String phone2;
+    private String group;
+    private String homePhone;
+    private String mobilePhone;
+    private String workPhone;
 
     public String getFirstname() {
         return firstname;
-    }
-
-    public String getMiddlename() {
-        return middlename;
     }
 
     public String getLastname() {
         return lastname;
     }
 
-    public String getHome() {
-        return home;
+    public String getHomePhone() {
+        return homePhone;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getGroup() {
+        return group;
     }
 
-    public String getEmail() {
-        return email;
+    public String getWorkPhone() {
+        return workPhone;
     }
 
-    public String getEmail2() {
-        return email2;
-    }
-
-    public String getByear() {
-        return byear;
-    }
-
-    public String getAddress2() {
-        return address2;
-    }
-
-    public String getPhone2() {
-        return phone2;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
     public int getId() {
@@ -67,48 +47,28 @@ public class ContactData {
         return this;
     }
 
-    public ContactData withMiddlename(String middlename) {
-        this.middlename = middlename;
-        return this;
-    }
-
     public ContactData withLastname(String lastname) {
         this.lastname = lastname;
         return this;
     }
 
-    public ContactData withHome(String home) {
-        this.home = home;
+    public ContactData withHomePhone(String homePhone) {
+        this.homePhone = homePhone;
         return this;
     }
 
-    public ContactData withMobile(String mobile) {
-        this.mobile = mobile;
+    public ContactData withMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
         return this;
     }
 
-    public ContactData withEmail(String email) {
-        this.email = email;
+    public ContactData withGroup(String group) {
+        this.group = group;
         return this;
     }
 
-    public ContactData withEmail2(String email2) {
-        this.email2 = email2;
-        return this;
-    }
-
-    public ContactData withByear(String byear) {
-        this.byear = byear;
-        return this;
-    }
-
-    public ContactData withAddress2(String address2) {
-        this.address2 = address2;
-        return this;
-    }
-
-    public ContactData withPhone2(String phone2) {
-        this.phone2 = phone2;
+    public ContactData withWorkPhone(String workPhone) {
+        this.workPhone = workPhone;
         return this;
     }
 

@@ -13,7 +13,7 @@ public class ContactModificationTests extends ContactTestBase{
     @BeforeMethod
     public void ensurePreconditions() {
         app.contact().contactPage();
-        createIfNotExist(new ContactData().withLastname("Petrov").withFirstname("Ivan").withAddress2("Moscow").withEmail("232@mail.ru").withMobile("78961234545"));
+        createIfNotExist(new ContactData().withLastname("Petrov").withFirstname("Ivan").withMobilePhone("78961234545"));
     }
 
     @Test
@@ -21,7 +21,7 @@ public class ContactModificationTests extends ContactTestBase{
         Contacts before = app.contact().all();
         ContactData modifiedContact = before.iterator().next();
         ContactData contact = new ContactData()
-                .withLastname("Petrov").withFirstname("Ivan").withAddress2("Moscow").withEmail("232@mail.ru").withMobile("78961234545").withId(modifiedContact.getId());
+                .withLastname("Petrov").withFirstname("Ivan").withMobilePhone("78961234545").withId(modifiedContact.getId());
         app.contact().modify(contact);
         assertThat(app.contact().count(), equalTo(before.size()));
         Contacts after = app.contact().all();
