@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509ed37e-9202-46cf-b946-c339c1983b98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/test-20220201T003544.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,6 +44,11 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="sandbox" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="sandbox" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -417,6 +422,11 @@
           <line>142</line>
           <option name="timeStamp" value="196" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
+          <line>57</line>
+          <option name="timeStamp" value="197" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/4.1.0/7abe432c1e9732cc9d3cbfc6a0c537ae9a44c239/selenium-support-4.1.0.jar!/org/openqa/selenium/support/ui/Select.class</url>
           <line>26</line>
@@ -448,6 +458,14 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
+          <line>58</line>
+          <properties class="ru.stqa.pft.addressbook.tests.GroupCreationTests" method="testGroupCreation">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="198" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
