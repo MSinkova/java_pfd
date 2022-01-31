@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509ed37e-9202-46cf-b946-c339c1983b98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testing-contacts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/testng-groups.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/ContactDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/generators/GroupDataGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactAddTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/ContactAddTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +92,7 @@
       <recent name="ru.stqa.pfd.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml">
+  <component name="RunManager" selected="TestNG.ContactAddTest.testGroupCreation">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -297,25 +293,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="TestNG">
+      <shortenClasspath name="NONE" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.ContactDataGenerator" />
       <item itemvalue="Gradle.ContactAddressPhoneTests" />
       <item itemvalue="Gradle.ContactAddTest" />
       <item itemvalue="Gradle.ContactPhoneTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
-      <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
       <item itemvalue="Gradle.ContactModificationTests" />
       <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
+      <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
       <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testing-contacts.xml" />
       <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml" />
+        <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
         <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testing-contacts.xml" />
+        <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml" />
         <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
         <item itemvalue="Gradle.ContactModificationTests" />
-        <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
       </list>
     </recent_temporary>
   </component>
@@ -381,6 +397,26 @@
           <line>32</line>
           <option name="timeStamp" value="175" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="190" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="193" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="194" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-17.0.1/lib/src.zip!/java.base/java/util/Properties.java</url>
+          <line>142</line>
+          <option name="timeStamp" value="196" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/4.1.0/7abe432c1e9732cc9d3cbfc6a0c537ae9a44c239/selenium-support-4.1.0.jar!/org/openqa/selenium/support/ui/Select.class</url>
           <line>26</line>
@@ -404,6 +440,26 @@
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>25</line>
+          <properties class="ru.stqa.pft.addressbook.appmanager.ApplicationManager" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>16</line>
+          <properties field="properties" class="ru.stqa.pft.addressbook.appmanager.ApplicationManager" />
+          <option name="timeStamp" value="191" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
+          <line>17</line>
+          <properties field="wd" class="ru.stqa.pft.addressbook.appmanager.ApplicationManager" />
+          <option name="timeStamp" value="192" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
