@@ -1,6 +1,7 @@
 package ru.stqa.pft.addressbook.tests;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.thoughtworks.xstream.XStream;
 import org.openqa.selenium.json.TypeToken;
 import org.testng.annotations.DataProvider;
@@ -30,7 +31,7 @@ public class ContactAddTest extends ContactTestBase {
       json += line;
       line = reader.readLine();
     }
-    Gson gson = new Gson();
+    Gson gson = new GsonBuilder().setPrettyPrinting().excludeFieldsWithoutExposeAnnotation().create();
     List<ContactData> contacts = gson.fromJson(json, new TypeToken<List<ContactData>>(){}.getType());
     XStream xstream = new XStream();
     return  contacts.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
