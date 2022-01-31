@@ -4,8 +4,16 @@ repositories {
     mavenCentral()
 }
 
-test {
-    useTestNG()
+task testGroups(type: Test) {
+    useTestNG {
+        suites 'src/test/recources/testing-groups.xml'
+    }
+}
+
+task testContacts(type: Test) {
+    useTestNG {
+        suites 'src/test/recources/testing-contacts.xml'
+    }
 }
 
 dependencies {
@@ -22,6 +30,5 @@ dependencies {
     implementation 'org.testng:testng:7.4.0'
     implementation 'org.seleniumhq.selenium:selenium-java:4.1.0'
 }
-
 
 
