@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="509ed37e-9202-46cf-b946-c339c1983b98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/test-20220201T003544.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/DbConnectionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/TestBase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/addressbook-web-tests/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +95,7 @@
       <recent name="ru.stqa.pfd.sandbox" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ContactAddTest.testGroupCreation">
+  <component name="RunManager" selected="Gradle.DbConnectionTest">
     <configuration name="ContactDataGenerator" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.stqa.pft.addressbook.generators.ContactDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -155,12 +153,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactModificationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ContactPhoneTests" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.ContactModificationTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.ContactPhoneTests&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -176,12 +174,12 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ContactPhoneTests" type="GradleRunConfiguration" factoryName="Gradle">
+    <configuration name="DbConnectionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.ContactPhoneTests&quot;" />
+        <option name="scriptParameters" value="--tests &quot;ru.stqa.pft.addressbook.tests.DbConnectionTest&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -324,19 +322,19 @@
       <item itemvalue="Gradle.ContactAddTest" />
       <item itemvalue="Gradle.ContactPhoneTests" />
       <item itemvalue="Gradle.GroupCreationTests" />
-      <item itemvalue="Gradle.ContactModificationTests" />
       <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
       <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
       <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testing-contacts.xml" />
       <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml" />
+      <item itemvalue="Gradle.DbConnectionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DbConnectionTest" />
         <item itemvalue="TestNG.ContactAddTest.testGroupCreation" />
         <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testing-contacts.xml" />
         <item itemvalue="TestNG.C:/Users/79162/OneDrive/Документы/GitHub/java_pfd/addressbook-web-tests/src/test/resources/testng-groups.xml" />
         <item itemvalue="Gradle.Tests in 'ru.stqa.pft.addressbook.tests'" />
-        <item itemvalue="Gradle.ContactModificationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -427,6 +425,11 @@
           <line>57</line>
           <option name="timeStamp" value="197" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/DbConnectionTest.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="201" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/selenium-support/4.1.0/7abe432c1e9732cc9d3cbfc6a0c537ae9a44c239/selenium-support-4.1.0.jar!/org/openqa/selenium/support/ui/Select.class</url>
           <line>26</line>
@@ -438,7 +441,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$PROJECT_DIR$/../../../../../../Program Files/Java/jdk-17.0.1/lib/src.zip!/java.base/java/util/stream/Stream.java</url>
           <line>1231</line>
-          <properties class="java.util.stream.Stream" method="max">
+          <properties class="java.util.stream.Stream">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="132" />
@@ -446,7 +449,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.4.0/a7cafb3160352d21601161412bb2005bbe0f0e40/testng-7.4.0-sources.jar!/org/testng/Assert.java</url>
           <line>1063</line>
-          <properties class="org.testng.Assert" method="assertEquals">
+          <properties class="org.testng.Assert">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="134" />
@@ -454,7 +457,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
           <line>25</line>
-          <properties class="ru.stqa.pft.addressbook.appmanager.ApplicationManager" method="&lt;init&gt;">
+          <properties class="ru.stqa.pft.addressbook.appmanager.ApplicationManager">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="195" />
@@ -462,10 +465,18 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/GroupCreationTests.java</url>
           <line>58</line>
-          <properties class="ru.stqa.pft.addressbook.tests.GroupCreationTests" method="testGroupCreation">
+          <properties class="ru.stqa.pft.addressbook.tests.GroupCreationTests">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="198" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/tests/DbConnectionTest.java</url>
+          <line>13</line>
+          <properties class="ru.stqa.pft.addressbook.tests.DbConnectionTest" method="testDbConnection">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="200" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/ru/stqa/pft/addressbook/appmanager/ApplicationManager.java</url>
