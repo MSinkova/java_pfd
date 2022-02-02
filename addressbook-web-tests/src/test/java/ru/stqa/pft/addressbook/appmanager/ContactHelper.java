@@ -64,6 +64,18 @@ public class ContactHelper extends HelperBase {
         click(By.xpath("//div[@id='content']/form/input[22]"));
     }
 
+    public void addContactToGroup() {
+        wd.findElement(By.name("add")).click();
+    }
+
+    public void selectGroup() {
+        new Select(wd.findElement(By.name("group"))).selectByIndex(2);
+    }
+
+    public void delContactToGroup() {
+        wd.findElement(By.name("remove")).click();
+    }
+
     public void createContact(ContactData contact) {
         initContactCreation();
         fillContactForm(contact, true);

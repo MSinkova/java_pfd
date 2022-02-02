@@ -6,6 +6,8 @@ import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
 import javax.persistence.Entity;
 import java.io.File;
+import java.util.HashSet;
+import java.util.Set;
 import javax.persistence.Column;
 import org.hibernate.annotations.Type;
 
@@ -27,10 +29,6 @@ public class ContactData {
     @Expose
     @Column(name = "lastname")
     private String lastname;
-
-    @Expose
-    @Transient
-    private String group;
 
     @Expose
     @Column(name = "home")
@@ -76,6 +74,11 @@ public class ContactData {
     @Transient
     private String photo;
 
+    @ManyToMany
+    @JoinTable(name = "address_in_groups",
+            joinColumns = @JoinColumn(name = "id"),inverseJoinColumns = @JoinColumn(name = "group_id"))
+    private Set<GroupData> groups = new HashSet<GroupData>();
+
     public File getPhoto() {
         if (photo != null) {
             return new File(photo);
@@ -100,8 +103,8 @@ public class ContactData {
         return homePhone;
     }
 
-    public String getGroup() {
-        return group;
+    public Groups getGroups() {
+        return new Groups(groups);
     }
 
     public String getWorkPhone() {
@@ -170,10 +173,6 @@ public class ContactData {
         return this;
     }
 
-    public ContactData withGroup(String group) {
-        this.group = group;
-        return this;
-    }
 
     public ContactData withWorkPhone(String workPhone) {
         this.workPhone = workPhone;
