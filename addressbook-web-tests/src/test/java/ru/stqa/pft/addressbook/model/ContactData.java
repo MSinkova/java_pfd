@@ -53,7 +53,8 @@ public class ContactData {
     private String address;
 
     @Expose
-    @Transient
+    @Column(name = "email")
+    @Type(type = "text")
     private String email;
 
     @Expose
@@ -72,16 +73,19 @@ public class ContactData {
     @Transient
     private String allEmail;
 
-    @Expose
     @Transient
-    private File photo;
+    private String photo;
 
     public File getPhoto() {
-        return photo;
+        if (photo != null) {
+            return new File(photo);
+        } else {
+            return null;
+        }
     }
 
     public ContactData withPhoto(File photo) {
-        this.photo = photo;
+        this.photo = photo.getPath();
         return this;
     }
     public String getFirstname() {

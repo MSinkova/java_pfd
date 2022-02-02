@@ -8,29 +8,6 @@ test {
     useTestNG()
 }
 
-task testGroups(type: Test) {
-    useTestNG {
-        suites 'src/test/recources/testing-groups.xml'
-    }
-    if (project.hasProperty('browser')) {
-        systemProperty 'browser', "${browser}"
-    }
-    if (project.hasProperty('target')) {
-        systemProperty 'target', "${target}"
-    }
-}
-
-task testContacts(type: Test) {
-    useTestNG {
-        suites 'src/test/recources/testing-contacts.xml'
-    }
-    if (project.hasProperty('browser')) {
-        systemProperty 'browser', "${browser}"
-    }
-    if (project.hasProperty('target')) {
-        systemProperty 'target', "${target}"
-    }
-}
 
 dependencies {
     implementation 'com.buschmais.jqassistant.plugin:testng:1.11.1'
