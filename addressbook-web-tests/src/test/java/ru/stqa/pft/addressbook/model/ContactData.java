@@ -74,6 +74,9 @@ public class ContactData {
     @Transient
     private String photo;
 
+    @Transient
+    private String homePhone2;
+
     @ManyToMany
     @JoinTable(name = "address_in_groups",
             joinColumns = @JoinColumn(name = "id"),inverseJoinColumns = @JoinColumn(name = "group_id"))
@@ -141,6 +144,15 @@ public class ContactData {
 
     public String getAllPhone() {
         return allPhone;
+    }
+
+    public String getHomePhone2() {
+        return homePhone2;
+    }
+
+    public ContactData withHomePhone2(String homePhone2) {
+        this.homePhone2 = homePhone2;
+        return this;
     }
 
     public ContactData withAllPhone(String allPhone) {

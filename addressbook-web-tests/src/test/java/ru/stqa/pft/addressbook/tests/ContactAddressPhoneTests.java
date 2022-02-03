@@ -24,7 +24,7 @@ public class ContactAddressPhoneTests extends ContactTestBase{
     }
 
     private String mergePhones(ContactData contact) {
-        return Arrays.asList(contact.getHomePhone(),contact.getMobilePhone(),contact.getWorkPhone())
+        return Arrays.asList(contact.getHomePhone(),contact.getMobilePhone(),contact.getWorkPhone(), contact.getHomePhone2())
                 .stream().filter((s) -> ! s.equals(""))
                 .map(ContactAddressPhoneTests::cleaned)
                 .collect(Collectors.joining("\n"));
@@ -49,10 +49,10 @@ public class ContactAddressPhoneTests extends ContactTestBase{
     }
 
     public static String cleanedAddress(String address) {
-        return address.replaceAll("\\s","").replaceAll("[-()]","");
+        return address.trim().replaceAll(" +", " ");
     }
 
     public static String cleanedEmail(String email) {
-        return email.replaceAll("\\s","").replaceAll("[-()]","");
+        return email.trim().replaceAll(" +", " ");
     }
 }

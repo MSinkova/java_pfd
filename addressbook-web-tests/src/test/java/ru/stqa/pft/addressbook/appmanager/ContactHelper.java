@@ -143,11 +143,12 @@ public class ContactHelper extends HelperBase {
         String email = wd.findElement(By.name("email")).getAttribute("value");
         String email2 = wd.findElement(By.name("email2")).getAttribute("value");
         String email3 = wd.findElement(By.name("email3")).getAttribute("value");
+        String home2 = wd.findElement(By.name("phone2")).getAttribute("value");
 
         wd.navigate().back();
         return new ContactData().withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
                 .withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work)
-                .withAddress(address).withEmail(email).withEmail2(email2).withEmail3(email3);
+                .withAddress(address).withEmail(email).withEmail2(email2).withEmail3(email3).withHomePhone2(home2);
     }
 
     private void initContactModificationById(int id) {
